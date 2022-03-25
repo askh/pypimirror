@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  devpisrv:
+    build: .
+    ports:
+      - "3141:3141"
+    volumes:
+      - devpisrv-data:/var/local/devpisrv
+    restart: always
+volumes:
+  devpisrv-data:

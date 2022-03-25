@@ -1,0 +1,3 @@
+devpi-server>=6.5.0
+devpi-web>=4.0.8
+devpi-client>=5.2.3
