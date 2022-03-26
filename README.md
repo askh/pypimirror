@@ -20,11 +20,11 @@ nginx в качестве обратного прокси-сервера, исп
 
 ## Установка
 
-### Клонируйте репозиторий:
+### Клонируйте репозиторий
 
 git clone https://github.com/askh/devpisrv.git
 
-### Соберите сервис:
+### Соберите сервис
 
 cd devpisrv
 docker-compose build
@@ -51,10 +51,12 @@ pip install -v --timeout 120 --trusted-host mirror.example.com -U -i http://mirr
 Создайте файл ~/.config/pip/pip.conf следующего содержания (замените адреес
 mirror.expample.com на адрес вашего зеркала):
 
+```
 [global]
 index-url=http://mirror.example.com:3141/root/pypi/+simple/
 trusted-host=mirror.example.com
 timeout=120
+```
 
 После этого устанавливайте пакеты обычным образом, например:
 
