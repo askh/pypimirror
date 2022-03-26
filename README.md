@@ -35,7 +35,9 @@ docker-compose build
 
 ### Запустите сервис
 
+```
 docker-compose up -d
+```
 
 ## Использование
 
