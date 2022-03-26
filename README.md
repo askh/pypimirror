@@ -22,12 +22,16 @@ nginx в качестве обратного прокси-сервера, исп
 
 ### Клонируйте репозиторий
 
+```
 git clone https://github.com/askh/devpisrv.git
+```
 
 ### Соберите сервис
 
+```
 cd devpisrv
 docker-compose build
+```
 
 ### Запустите сервис
 
@@ -44,7 +48,9 @@ docker-compose up -d
 
 ### Использование опций командной строки
 
+```
 pip install -v --timeout 120 --trusted-host mirror.example.com -U -i http://mirror.example.com:3141/root/pypi/+simple/ virtualenv
+```
 
 ### Использовние конфигруационного файла
 
@@ -60,5 +66,6 @@ timeout=120
 
 После этого устанавливайте пакеты обычным образом, например:
 
+```
 pip install virtualenv
-
+```
