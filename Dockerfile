@@ -8,5 +8,6 @@ USER devpisrv:devpisrv
 RUN pip3 install -U pip
 ENV PATH="/home/devpisrv/.local/bin:${PATH}"
 RUN pip install -U -r /tmp/requirements.txt
-RUN devpi-init --serverdir /var/local/devpisrv
-CMD devpi-server --serverdir /var/local/devpisrv --host 0.0.0.0
+COPY src/devpisrv.sh /usr/local/bin/
+ENTRYPOINT ["devpisrv.sh"]
+
