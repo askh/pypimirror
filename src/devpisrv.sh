@@ -15,7 +15,7 @@ then
     fi
     INSTALL_ROOT_PASSWORD=${ROOT_PASSWORD:-${DEFAULT_INSECURE_ROOT_PASSWORD}}
     devpi-init --serverdir "$SERVER_DIR" --root-passwd "${INSTALL_ROOT_PASSWORD}"
-    rm "${INSTALL_DIR}/*"
+    # rm "${INSTALL_DIR}/*"
 fi
 
 devpi-server --serverdir "$SERVER_DIR" --host 0.0.0.0 --restrict-modify root
