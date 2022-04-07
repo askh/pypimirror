@@ -1,4 +1,4 @@
-# Конфигурационные файлы для запуска зеркала пакетов pip
+# Конфигурационные файлы для запуска частичного зеркала PyPi используя docker-compose
 
 Конфигурационные файлы предназначены для развёртывания зеркала PyPi для
 локального применения, например, на случай, если доступ к серверам PyPi окажется
@@ -30,7 +30,7 @@ SERVER_IP=127.0.0.1
 ### Клонируйте репозиторий
 
 ```
-git clone https://github.com/askh/devpisrv.git
+git clone https://github.com/askh/pypimirror.git
 ```
 ### Укажите настройки зеркала
 
@@ -43,7 +43,7 @@ git clone https://github.com/askh/devpisrv.git
 ### Соберите образ и запустите сервис
 
 ```
-cd devpisrv
+cd pypimirror
 docker-compose up -d
 ```
 
