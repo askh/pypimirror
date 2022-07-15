@@ -10,5 +10,5 @@ RUN pip3 install -U pip
 ENV PATH="/home/devpisrv/.local/bin:${PATH}"
 RUN pip install -U -r /tmp/requirements.txt
 COPY src/devpisrv.py /usr/local/bin/
-ENTRYPOINT ["devpisrv.py"]
+ENTRYPOINT ["devpisrv.py", "--overwrite-config"]
 
