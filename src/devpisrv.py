@@ -13,9 +13,15 @@ arg_parser.add_argument(
     '-d',
     '--data-dir',
     type=str,
-    default = '/var/local/devpisrv',
-    help = 'Path to the data directory'
+    default='/var/local/devpisrv',
+    help='Path to the data directory'
 )
+arg_parser.add_argument(
+    '-w',
+    '--overwrite-config',
+    action='store_true',
+    default=False,
+    help='Overwrite the config file if exists')
 args = arg_parser.parse_args()
 
 server_dir = os.path.join(args.data_dir, "server")
@@ -29,7 +35,7 @@ for subdir_path in [server_dir, config_dir]:
     if not os.path.exists(subdir_path):
         os.mkdir(subdir_path, mode=0o770)
 
-if not os.path.exists(config_file):
+if not os.path.exists(config_file) or args.overwrite_config:
     env_config_values = dotenv_values(env_file) if os.path.isfile(env_file) else { }
 
     config_data = {
