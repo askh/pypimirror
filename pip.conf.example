@@ -2,3 +2,6 @@
 index-url=http://mirror.example.com:3141/root/pypi/+simple/
 trusted-host=mirror.example.com
 timeout=120
+
+[search]
+index=http://mirror.example.com:3141/root/pypi/
